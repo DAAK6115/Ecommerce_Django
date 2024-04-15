@@ -1,0 +1,12 @@
+{% autoescape off %}
+Bonjour {{ user.username }},
+
+Merci de vous être inscrit sur notre site. Avant de pouvoir utiliser votre compte, vous devez l'activer en cliquant sur le lien ci-dessous :
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Si vous n'avez pas demandé l'inscription à notre site, ignorez cet e-mail.
+
+Cordialement,
+L'équipe du site
+{% endautoescape %}
